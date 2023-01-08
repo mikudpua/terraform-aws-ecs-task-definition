@@ -43,3 +43,4 @@ resource "null_resource" "update-service" {
     command = "aws ecs update-service --cluster ${aws_ecs_service.mongo.cluster} --service ${aws_ecs_service.mongo.name} --task-definition ${module.mongo-task-definition.arn} --force-new-deployment"
   }
 }
+}
